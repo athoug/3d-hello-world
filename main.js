@@ -34,9 +34,9 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 // 2. Load the Earth texture
 const loader = new THREE.TextureLoader();
-const earthTexture = loader.load('./public/images/earth.jpg');
-const bumpMap = loader.load('./public/images/earth-bump-map.jpg');
-const specularMap = loader.load('./public/images/earth-specular-map.jpg');
+const earthTexture = loader.load('/images/earth.jpg');
+const bumpMap = loader.load('/images/earth-bump-map.jpg');
+const specularMap = loader.load('/images/earth-specular-map.jpg');
 
 scene.position.setZ(3);
 camera.position.setY(3);
@@ -92,7 +92,7 @@ Array(300).fill().forEach(addStar);
 // 7. Add a font to the scene
 const fontLoader = new FontLoader();
 let textMesh;
-fontLoader.load('./public/fonts/Karla.json', (font) => {
+fontLoader.load('/fonts/Karla.json', (font) => {
 	const textGeometry = new TextGeometry('Hello World!', {
 		font: font,
 		size: 0.25, // size of the text
